@@ -16,12 +16,12 @@ class Command(BaseCommand):
 
         self.stdout.write('Creating users (superheroes)...')
         users_data = [
-            {'username': 'ironman', 'email': 'tony@avengers.com', 'password': 'pepper3000'},
-            {'username': 'spiderman', 'email': 'peter@avengers.com', 'password': 'mj4ever'},
-            {'username': 'blackwidow', 'email': 'natasha@avengers.com', 'password': 'widow99'},
-            {'username': 'batman', 'email': 'bruce@justice.com', 'password': 'alfred2k'},
-            {'username': 'wonderwoman', 'email': 'diana@justice.com', 'password': 'themyscira'},
-            {'username': 'superman', 'email': 'clark@justice.com', 'password': 'krypto1938'},
+            {'name': 'Tony Stark',     'username': 'ironman',     'email': 'tony@avengers.com',    'password': 'pepper3000'},
+            {'name': 'Peter Parker',   'username': 'spiderman',   'email': 'peter@avengers.com',   'password': 'mj4ever'},
+            {'name': 'Natasha Romanoff','username': 'blackwidow', 'email': 'natasha@avengers.com', 'password': 'widow99'},
+            {'name': 'Bruce Wayne',    'username': 'batman',      'email': 'bruce@justice.com',    'password': 'alfred2k'},
+            {'name': 'Diana Prince',   'username': 'wonderwoman', 'email': 'diana@justice.com',    'password': 'themyscira'},
+            {'name': 'Clark Kent',     'username': 'superman',    'email': 'clark@justice.com',    'password': 'krypto1938'},
         ]
 
         users = {}
