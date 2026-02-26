@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import API_BASE_URL from '../config';
+// API endpoint: https://expert-guide-445jvv4569v3764v-8000.app.github.dev/api/users
 
 const EMPTY_FORM = { name: '', username: '', email: '', password: '', team_id: '' };
 

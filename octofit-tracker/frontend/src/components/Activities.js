@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import API_BASE_URL from '../config';
+// API endpoint: https://expert-guide-445jvv4569v3764v-8000.app.github.dev/api/activities
 
 // Safely render a user field that may be a nested object or a plain value
 const displayUser = (user) => {
