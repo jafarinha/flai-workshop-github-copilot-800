@@ -1,0 +1,367 @@
+/* ── OctoFit Tracker – Global Theme ───────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --octofit-primary:      #4f46e5;   /* indigo */
+  --octofit-primary-dark: #3730a3;
+  --octofit-secondary:    #7c3aed;   /* violet */
+  --octofit-accent:       #10b981;   /* emerald */
+  --octofit-accent-light: #34d399;
+  --octofit-danger:       #ef4444;
+  --octofit-warning:      #f59e0b;
+  --octofit-dark:         #0f172a;   /* slate-900 */
+  --octofit-dark-mid:     #1e293b;   /* slate-800 */
+  --octofit-dark-light:   #334155;   /* slate-700 */
+  --octofit-bg:           #f1f5f9;   /* slate-100 */
+  --octofit-bg-card:      #ffffff;
+  --octofit-text:         #1e293b;
+  --octofit-text-muted:   #64748b;
+  --octofit-border:       #e2e8f0;
+  --octofit-shadow:       0 4px 24px rgba(79, 70, 229, 0.10);
+  --octofit-shadow-lg:    0 8px 40px rgba(79, 70, 229, 0.18);
+  --octofit-radius:       14px;
+  --octofit-radius-sm:    8px;
+}
+
+/* ── Reset & Base ────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(160deg, #e0e7ff 0%, #f1f5f9 40%, #ecfdf5 100%);
+  background-attachment: fixed;
+  color: var(--octofit-text);
+  min-height: 100vh;
+}
+
+/* ── App Shell ───────────────────────────────────────────────── */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main.container { flex: 1; }
+
+/* ── Headings ────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--octofit-dark);
+}
+
+.display-5, .display-6 {
+  background: linear-gradient(90deg, var(--octofit-primary) 0%, var(--octofit-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+/* ── Links ───────────────────────────────────────────────────── */
+a {
+  color: var(--octofit-primary);
+  transition: color 0.18s;
+}
+a:hover {
+  color: var(--octofit-secondary);
+}
+.link-primary {
+  color: var(--octofit-primary) !important;
+  text-decoration: underline dotted;
+}
+.link-primary:hover {
+  color: var(--octofit-secondary) !important;
+  text-decoration: underline solid;
+}
+
+/* ── Navbar ──────────────────────────────────────────────────── */
+.navbar {
+  background: linear-gradient(90deg, var(--octofit-dark) 0%, var(--octofit-dark-mid) 100%) !important;
+  box-shadow: 0 2px 16px rgba(15, 23, 42, 0.50);
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 0.3px;
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.navbar-brand img {
+  border-radius: 8px;
+  box-shadow: 0 0 0 2px var(--octofit-accent);
+  filter: brightness(1.05);
+}
+
+.navbar-brand .brand-name {
+  background: linear-gradient(90deg, #a5f3fc, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.78) !important;
+  padding: 0.4rem 0.9rem !important;
+  border-radius: var(--octofit-radius-sm);
+  margin: 0 2px;
+  transition: background 0.18s, color 0.18s;
+  border: 1px solid transparent;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+  background-color: rgba(167, 139, 250, 0.20);
+  border-color: rgba(167, 139, 250, 0.30);
+}
+
+.nav-link.active {
+  color: #fff !important;
+  background: linear-gradient(90deg, rgba(79,70,229,0.55), rgba(124,58,237,0.40));
+  border-color: rgba(167, 139, 250, 0.45);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+.btn-success {
+  background: linear-gradient(90deg, var(--octofit-accent) 0%, #059669 100%);
+  border-color: transparent;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.btn-success:hover {
+  background: linear-gradient(90deg, var(--octofit-accent-light) 0%, var(--octofit-accent) 100%);
+  border-color: transparent;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(16,185,129,0.40);
+}
+
+.btn-outline-light {
+  border-width: 2px;
+  font-weight: 600;
+}
+.btn-outline-light:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(255,255,255,0.20);
+}
+
+.btn {
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+/* ── Hero / Home ─────────────────────────────────────────────── */
+.octofit-hero {
+  background: linear-gradient(135deg, var(--octofit-dark) 0%, #1e3a5f 60%, #1a1d4e 100%);
+  color: #fff;
+  border-radius: var(--octofit-radius);
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--octofit-shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.octofit-hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99,102,241,0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.octofit-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: -40px;
+  width: 250px; height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(16,185,129,0.20) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.octofit-hero h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #a5f3fc, #c4b5fd, #6ee7b7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.octofit-hero p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.82);
+}
+
+/* ── Quick-nav Cards ─────────────────────────────────────────── */
+.quick-nav-card {
+  border: 1px solid var(--octofit-border);
+  border-radius: var(--octofit-radius);
+  box-shadow: var(--octofit-shadow);
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  text-decoration: none;
+  color: inherit;
+  background: var(--octofit-bg-card);
+}
+
+.quick-nav-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--octofit-shadow-lg);
+  border-color: var(--octofit-primary);
+  color: var(--octofit-primary);
+}
+
+.quick-nav-card .card-body { padding: 1.5rem; }
+
+.quick-nav-icon {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* ── Component Cards ─────────────────────────────────────────── */
+.octofit-card {
+  border: 1px solid var(--octofit-border);
+  border-radius: var(--octofit-radius);
+  box-shadow: var(--octofit-shadow);
+  overflow: hidden;
+  background: var(--octofit-bg-card);
+}
+
+.octofit-card .card-header {
+  background: linear-gradient(90deg, var(--octofit-dark) 0%, var(--octofit-dark-mid) 60%, #1a2e50 100%);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-bottom: 3px solid var(--octofit-accent);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.octofit-card .card-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
+.octofit-card .card-body { padding: 0; }
+
+/* ── Tables ──────────────────────────────────────────────────── */
+.table { margin-bottom: 0; }
+
+.table thead th {
+  background: linear-gradient(90deg, var(--octofit-primary) 0%, var(--octofit-secondary) 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  border-bottom: none;
+  padding: 0.85rem 1rem;
+  white-space: nowrap;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: rgba(79, 70, 229, 0.04);
+}
+
+.table tbody tr { transition: background-color 0.12s; }
+
+.table tbody tr:hover {
+  background-color: rgba(79, 70, 229, 0.09) !important;
+}
+
+.table td {
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+  border-color: var(--octofit-border);
+  color: var(--octofit-text);
+}
+
+/* ── Badges ──────────────────────────────────────────────────── */
+.count-badge {
+  background: linear-gradient(90deg, var(--octofit-accent) 0%, #059669 100%);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.28em 0.75em;
+  border-radius: 20px;
+  margin-left: auto;
+  letter-spacing: 0.3px;
+}
+
+.badge.bg-primary {
+  background: linear-gradient(90deg, var(--octofit-primary), var(--octofit-secondary)) !important;
+}
+
+.badge.bg-success {
+  background: linear-gradient(90deg, var(--octofit-accent), #059669) !important;
+}
+
+.badge.bg-info {
+  background: linear-gradient(90deg, #0ea5e9, #0284c7) !important;
+  color: #fff !important;
+}
+
+.badge.bg-secondary {
+  background: linear-gradient(90deg, #64748b, #475569) !important;
+}
+
+/* ── Leaderboard medal colors ────────────────────────────────── */
+.rank-1 { color: #f59e0b; font-weight: 800; font-size: 1.3rem; }
+.rank-2 { color: #9ca3af; font-weight: 700; font-size: 1.2rem; }
+.rank-3 { color: #b45309; font-weight: 700; font-size: 1.15rem; }
+
+/* ── Loading / Empty states ──────────────────────────────────── */
+.octofit-spinner-wrap {
+  padding: 3.5rem;
+  text-align: center;
+  color: var(--octofit-primary);
+}
+
+.alert-info {
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1d4ed8;
+}
+
+/* ── Footer ──────────────────────────────────────────────────── */
+.octofit-footer {
+  background: linear-gradient(90deg, var(--octofit-dark) 0%, var(--octofit-dark-mid) 100%);
+  color: rgba(255,255,255,0.50);
+  text-align: center;
+  padding: 1.1rem;
+  font-size: 0.84rem;
+  margin-top: 3rem;
+  border-top: 2px solid var(--octofit-accent);
+}
+
+.octofit-footer a {
+  color: var(--octofit-accent-light);
+  text-decoration: none;
+}
+.octofit-footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.octofit-footer a {
+  color: var(--octofit-accent);
+  text-decoration: none;
+}
+
+.octofit-footer a:hover {
+  text-decoration: underline;
+}
